@@ -31,15 +31,6 @@ const navLinks = [
     ],
   },
   {
-    name: "Pretend Play",
-    href: "/pretend-play",
-    children: [
-      { name: "Role Play Sets", href: "/pretend-play/role-play" },
-      { name: "Kitchen Sets", href: "/pretend-play/kitchen" },
-      { name: "Doctor Sets", href: "/pretend-play/doctor" },
-    ],
-  },
-  {
     name: "Learning Toys",
     href: "/learning-toys",
     children: [
@@ -49,8 +40,10 @@ const navLinks = [
       { name: "Building Blocks", href: "/learning-toys/blocks" },
     ],
   },
+ 
 
   { name: "About Us", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
