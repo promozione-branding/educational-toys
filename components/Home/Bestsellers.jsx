@@ -11,69 +11,7 @@ import {
   Puzzle,
   Trophy,
 } from "lucide-react";
-
-const products = [
-  {
-    id: 1,
-    name: "Robotic Mechanical Hand",
-    age: "AGES 8+",
-    category: "8+",
-    price: 999,
-    oldPrice: 1249,
-    discount: 20,
-    reviews: 243,
-    image: "/products/1.png",
-    badge: "Bestseller",
-    badgeIcon: "🔥",
-    badgeColor: "bg-[#FFE0E6] text-[#D92842]",
-    imageBg: "bg-[#F4EAFE]",
-  },
-  {
-    id: 2,
-    name: "Microscope",
-    age: "AGES 8+",
-    category: "8+",
-    price: 995,
-    oldPrice: 1259,
-    discount: 21,
-    reviews: 153,
-    image: "/products/2.png",
-    badge: "Top Rated",
-    badgeIcon: "⭐",
-    badgeColor: "bg-[#FFF0C5] text-[#9C5A00]",
-    imageBg: "bg-[#F0F9E9]",
-  },
-  {
-    id: 3,
-    name: "Telescope",
-    age: "AGES 8+",
-    category: "8+",
-    price: 679,
-    oldPrice: 849,
-    discount: 20,
-    reviews: 128,
-    image: "/products/3.png",
-    badge: "Popular",
-    badgeIcon: "ϟ",
-    badgeColor: "bg-[#EADFFF] text-[#5427A0]",
-    imageBg: "bg-[#E9F5FF]",
-  },
-  {
-    id: 4,
-    name: "My First Science Kit",
-    age: "AGES 8+",
-    category: "8+",
-    price: 532,
-    oldPrice: 649,
-    discount: 18,
-    reviews: 43,
-    image: "/products/4.png",
-    badge: "Great Value",
-    badgeIcon: "◆",
-    badgeColor: "bg-[#E3F6D8] text-[#34732B]",
-    imageBg: "bg-[#FCE6F4]",
-  },
-];
+import { products } from "@/app/products/data";
 
 const filters = [
   { label: "All", value: "All" },
@@ -91,7 +29,7 @@ export default function Bestsellers() {
     activeFilter === "All"
       ? products
       : products.filter(
-          (product) => product.category === activeFilter
+          (product) => product.ageCategory === activeFilter
         );
 
   const toggleWishlist = (id) => {
@@ -355,21 +293,27 @@ export default function Bestsellers() {
                   </motion.button>
 
                   {/* Image */}
-                  <motion.img
-                    src={product.image}
-                    alt={product.name}
-                    loading="lazy"
-                    draggable="false"
-                    whileHover={{ scale: 1.06 }}
-                    transition={{
-                      duration: 0.45,
-                      ease: "easeOut",
-                    }}
-                    onError={(e) => {
-                      e.currentTarget.style.visibility = "hidden";
-                    }}
-                    className="h-full w-full object-cover drop-shadow-[0_10px_12px_rgba(0,0,0,0.10)]"
-                  />
+                  <a
+                    href={`/products/${product.slug}`}
+                    aria-label={`View ${product.name}`}
+                    className="flex h-full w-full items-center justify-center"
+                  >
+                    <motion.img
+                      src={product.image}
+                      alt={product.name}
+                      loading="lazy"
+                      draggable="false"
+                      whileHover={{ scale: 1.06 }}
+                      transition={{
+                        duration: 0.45,
+                        ease: "easeOut",
+                      }}
+                      onError={(e) => {
+                        e.currentTarget.style.visibility = "hidden";
+                      }}
+                      className="h-full w-full object-cover drop-shadow-[0_10px_12px_rgba(0,0,0,0.10)]"
+                    />
+                  </a>
                 </div>
 
                 {/* Product Information */}
@@ -382,7 +326,12 @@ export default function Bestsellers() {
 
                   {/* Name */}
                   <h3 className=" text-lg font-black leading-tight text-[#091B30] sm:text-xl">
-                    {product.name}
+                    <a
+                      href={`/products/${product.slug}`}
+                      className="transition-colors hover:text-[#7027A5]"
+                    >
+                      {product.name}
+                    </a>
                   </h3>
 
                   {/* Rating */}

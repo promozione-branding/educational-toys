@@ -18,7 +18,7 @@ import TopBar from "../Topbar";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Shop All", href: "/shop" },
+  { name: "Shop All", href: "/products" },
   {
     name: "Shop By Age",
     href: "/shop-by-age",
