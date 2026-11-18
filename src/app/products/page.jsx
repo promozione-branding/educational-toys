@@ -15,7 +15,7 @@ import {
   Sparkles,
   Star,
 } from "lucide-react";
-import { products } from "./data";
+import { products } from "../../../data";
 
 const categories = ["All toys", "STEM", "Science"];
 

@@ -26,7 +26,7 @@ import {
   Truck,
   Users,
 } from "lucide-react";
-import { products } from "../data";
+import { products } from "../../../../data";
 
 const featureIcons = [FlaskConical, Lightbulb, Brain, BookOpen, Star];
 const applicationIcons = [Home, GraduationCap, School, Users];

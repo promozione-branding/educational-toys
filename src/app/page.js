@@ -10,6 +10,7 @@ import FAQSection from "../../components/Home/FAQSection";
 import ContactSection from "../../components/Home/ContactSection";
 import WhyChooseUs from "../../components/Home/WhyChooseUs";
 import Categories from "../../components/Home/Categories";
+import Testimonials from "../../components/Home/Testimonials";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
     <Categories/>
    <SurpriseToyBox/> 
    <WhyChooseUs/>
+   <Testimonials/>
    <FAQSection/>
     <ContactSection/>
     </>

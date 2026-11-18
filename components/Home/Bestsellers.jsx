@@ -11,7 +11,7 @@ import {
   Puzzle,
   Trophy,
 } from "lucide-react";
-import { products } from "@/app/products/data";
+import { products } from "../../data";
 
 const filters = [
   { label: "All", value: "All" },

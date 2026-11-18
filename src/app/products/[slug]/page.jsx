@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import ProductDetails from "./ProductDetails";
-import { getProductBySlug, products } from "../data";
+import { getProductBySlug, products } from "../../../../data";
 
 export function generateStaticParams() {
   return products.map(({ slug }) => ({ slug }));
