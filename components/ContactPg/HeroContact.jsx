@@ -54,27 +54,65 @@ export default function HeroContact() {
 
       {/* Decorative Clouds */}
       <motion.div
-        animate={{ x: [0, 15, 0] }}
+        animate={{ x: [0, 8, 0], y: [0, -3, 0] }}
         transition={{ duration: 7, repeat: Infinity }}
-        className="pointer-events-none absolute left-[8%] top-[15%] hidden opacity-50 lg:block"
+        className="pointer-events-none absolute left-[7%] top-[19%] hidden opacity-75 lg:block"
       >
-        <svg width="125" height="65" viewBox="0 0 125 65" fill="none">
+        <svg width="155" height="92" viewBox="0 0 220 130" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="contact-cloud-purple" x1="42" y1="20" x2="165" y2="112" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#F8F1FF" />
+              <stop offset="1" stopColor="#DCC4F5" />
+            </linearGradient>
+            <filter id="contact-cloud-purple-shadow" x="0" y="0" width="220" height="130" filterUnits="userSpaceOnUse">
+              <feDropShadow dx="0" dy="4" stdDeviation="4" floodColor="#60358A" floodOpacity=".1" />
+            </filter>
+          </defs>
+          <g filter="url(#contact-cloud-purple-shadow)" fill="url(#contact-cloud-purple)">
+            <ellipse cx="110" cy="111" rx="106" ry="33" />
+            <circle cx="51" cy="81" r="36" />
+            <circle cx="104" cy="60" r="49" />
+            <circle cx="158" cy="79" r="38" />
+            <circle cx="192" cy="91" r="24" />
+          </g>
           <path
-            d="M20 54C8 54 2 46 2 36C2 26 11 19 21 20C24 6 36 0 49 4C57 -3 76 1 79 17C94 12 107 22 107 34C121 35 124 44 120 52C116 58 108 59 98 59H20V54Z"
-            fill="#E5D5FF"
+            d="M74 47C81 37 92 31 104 31M139 50C146 47 153 48 160 51"
+            stroke="white"
+            strokeLinecap="round"
+            strokeOpacity=".7"
+            strokeWidth="3"
           />
         </svg>
       </motion.div>
 
       <motion.div
-        animate={{ x: [0, -12, 0] }}
+        animate={{ x: [0, -7, 0], y: [0, 3, 0] }}
         transition={{ duration: 8, repeat: Infinity }}
-        className="pointer-events-none absolute right-[10%] top-[18%] hidden opacity-50 lg:block"
+        className="pointer-events-none absolute right-[24%] top-[28%] hidden opacity-70 lg:block"
       >
-        <svg width="105" height="60" viewBox="0 0 105 60" fill="none">
+        <svg width="126" height="76" viewBox="0 0 220 130" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="contact-cloud-peach" x1="40" y1="12" x2="170" y2="112" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#FFF9F0" />
+              <stop offset="1" stopColor="#F5DDBD" />
+            </linearGradient>
+            <filter id="contact-cloud-peach-shadow" x="0" y="0" width="220" height="130" filterUnits="userSpaceOnUse">
+              <feDropShadow dx="0" dy="4" stdDeviation="4" floodColor="#9B642F" floodOpacity=".1" />
+            </filter>
+          </defs>
+          <g filter="url(#contact-cloud-peach-shadow)" fill="url(#contact-cloud-peach)">
+            <ellipse cx="110" cy="111" rx="106" ry="33" />
+            <circle cx="51" cy="81" r="36" />
+            <circle cx="104" cy="60" r="49" />
+            <circle cx="158" cy="79" r="38" />
+            <circle cx="192" cy="91" r="24" />
+          </g>
           <path
-            d="M16 49C7 49 2 42 2 34C2 26 10 19 19 20C22 7 34 1 45 5C55 -2 72 4 75 18C89 14 102 22 102 34C102 43 95 49 85 49H16Z"
-            fill="#E5D5FF"
+            d="M74 47C81 37 92 31 104 31M139 50C146 47 153 48 160 51"
+            stroke="white"
+            strokeLinecap="round"
+            strokeOpacity=".72"
+            strokeWidth="3"
           />
         </svg>
       </motion.div>

@@ -44,6 +44,7 @@ const navLinks = [
 
   { name: "About Us", href: "/about" },
   { name: "Contact", href: "/contact" },
+  { name: "Blogs", href: "/blogs" },
 ];
 
 export default function Navbar() {
