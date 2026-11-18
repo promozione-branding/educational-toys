@@ -122,8 +122,7 @@ export default function AboutHero() {
             transition={{ delay: 0.3 }}
             className="mx-auto mt-6 max-w-2xl text-sm font-bold leading-7 text-[#34116E] sm:text-base md:text-lg"
           >
-            A passionate team on a mission to make learning
-            fun, creative, and meaningful for every child.
+           
           </motion.p>
 
           <motion.a

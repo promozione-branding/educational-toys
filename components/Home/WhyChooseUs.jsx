@@ -308,17 +308,7 @@ export default function WhyChooseUs() {
             </motion.div>
 
             {/* Outer Rings */}
-            <motion.div
-              animate={{
-                rotate: 360,
-              }}
-              transition={{
-                duration: 35,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="absolute h-[96%] w-[96%] rounded-full border-[9px] border-dashed border-[#0D78B8]/80 sm:border-[12px]"
-            />
+            
 
             {/* Orange Ring */}
             <motion.div

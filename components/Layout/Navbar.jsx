@@ -30,21 +30,12 @@ const navLinks = [
       { name: "Big Kids (9–12 Years)", href: "/age/big-kids" },
     ],
   },
-  {
-    name: "Learning Toys",
-    href: "/learning-toys",
-    children: [
-      { name: "STEM Toys", href: "/learning-toys/stem" },
-      { name: "Montessori Toys", href: "/learning-toys/montessori" },
-      { name: "Puzzles & Games", href: "/learning-toys/puzzles" },
-      { name: "Building Blocks", href: "/learning-toys/blocks" },
-    ],
-  },
+ 
  
 
   { name: "About Us", href: "/about" },
-  { name: "Contact", href: "/contact" },
   { name: "Blogs", href: "/blogs" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
